@@ -4,6 +4,8 @@ html,body,h1,h2 {
     padding: 0; 
     font-family: sans-serif;
     text-transform: uppercase; /*Everyhting uppercase in the code */
+    color: white;
+    font-weight: bold;
 }
 
 /*This was one of the user stretches, I found this in the inspect element and researched it */ 
@@ -21,7 +23,7 @@ header {
 }
 
 header a {
-    color: black;
+    color: white;
 }
 
 nav {
@@ -34,12 +36,12 @@ nav {
 nav a {
     text-decoration: none;
     font-size: .85rem;
-    font-weight: 700
+    font-weight: 700;
 }
 
 /* When the anchors are hovered over, they will underline */
 nav a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 /*Got this whole section from the background img demo, thanks Sam! */
@@ -47,11 +49,11 @@ nav a:hover {
     position: relative;
     background-size: cover;
     background-position: center;
-    height: 100vh
+    height: 100vh;
 }
 
 .image-workouts {
-    background-image: url(https://img.freepik.com/premium-photo/gym-centre-related-best-high-quality-image_1252102-29881.jpg)
+    background-image: url(https://img.freepik.com/premium-photo/gym-centre-related-best-high-quality-image_1252102-29881.jpg);
 }
 
 .image-diet {
@@ -62,5 +64,62 @@ nav a:hover {
     background-image: url(https://atlasbars.com/cdn/shop/articles/nt2RZKpvJPZLGFkifuQ7JVsakEoaEfg4ANpRkYCWvMV7lNDRA-out-0.png?v=1686145999);
 }
 
+/*Makes sure all the post meta behaves properly when I scroll, and the color is visible.*/
+.post-meta {
+    position: absolute;
+    bottom: 100px;  /*Moves the post meta to the bottom of the section, like the spacey page. Got the exact values from the inspect element*/
+    left: 3rem;
+    color: white;
+    display: flex;
+    flex-direction: column; /*Changes flex direction to column, so the h2,h1 and p stack on top of each other vertically*/
+    gap: .9rem;
+    background-color: black; /*The text wasn't really visible when it was white, so I added a black background */
+}
 
+/*Used the inspect element as a guideline for this section*/
+.post-meta-tagline {
+    font-weight: 100;
+    opacity: 1;
+    font-size: 1.2rem;
+}
 
+.post-meta-heading {
+    font-size: 2.5rem;
+}
+
+.post-meta-more {
+    margin-top: 1.2rem;
+    display: inline-block;
+    max-width: 200px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: .1rem;
+    opacity: 1; /*Opacity means its not transparent at all*/
+    color: #fff;
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+.post-meta-more:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/*As one of the user stretches, I added the social media links to the footer */
+footer {
+    background: black;
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
