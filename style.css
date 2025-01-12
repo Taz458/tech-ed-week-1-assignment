@@ -1,0 +1,66 @@
+/* I set margin and padding to 0 so I can manually change these throughout the code */
+html,body,h1,h2 {
+    margin: 0;
+    padding: 0; 
+    font-family: sans-serif;
+    text-transform: uppercase; /*Everyhting uppercase in the code */
+}
+
+/*This was one of the user stretches, I found this in the inspect element and researched it */ 
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed; /*This makes sure the header stays fixed at the top even when the user scrolls*/
+    color: black;
+    display: flex;
+    padding: 2.5rem 3rem; /* In this format, it means padding: [top and bottom] [left and right]. I got the same values from inspect element of the spacy page. Also, learnt from google that rem means root em, and is a measure of space relative to the root font size (usually 16px), so if I change the root font size it'll use the same scale. */
+    gap: 3rem; /*The Gap is the space between items inside a container when using flexbox */
+    z-index: 1; /*z-index controls the layering, whether it stays in front or goes behind. The higher it is, the higher it stacks in comparison to other elements with a lower z-index. */
+}
+
+header a {
+    color: black;
+}
+
+nav {
+    display: flex; /*Aligns items horizontally in the nav bar */
+    gap: 2.3rem; /*used same values as spacey website for gap, space between items in the nav bar */
+    align-items: center; /*I had a problem with the nav bar being above the logo, this fixed it */
+}
+
+/*Used same values as spacey website using insepct element, for the links in the nav bar */
+nav a {
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 700
+}
+
+/* When the anchors are hovered over, they will underline */
+nav a:hover {
+    text-decoration: underline
+}
+
+/*Got this whole section from the background img demo, thanks Sam! */
+.feature {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh
+}
+
+.image-workouts {
+    background-image: url(https://img.freepik.com/premium-photo/gym-centre-related-best-high-quality-image_1252102-29881.jpg)
+}
+
+.image-diet {
+    background-image: url(https://myhummusfit.com/cdn/shop/articles/1-Featured_image-high-protein-meal-prep-ideas.jpg?v=1722360073);
+}
+
+.image-recovery {
+    background-image: url(https://atlasbars.com/cdn/shop/articles/nt2RZKpvJPZLGFkifuQ7JVsakEoaEfg4ANpRkYCWvMV7lNDRA-out-0.png?v=1686145999);
+}
+
+
+
